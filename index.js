@@ -25,7 +25,7 @@ const client = new Client({
 client.on('qr', (qr) => {
     // Generate an external link for the QR code
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${encodeURIComponent(qr)}`;
-    console.log('QR RECEIVED! Open this link in your browser to scan it with WhatsApp:');
+    console.log('QR RECEIVED! Open this link in your browser to scan it withWhatsApp:');
     console.log(qrUrl);
     fs.writeFileSync('.qr_url', qrUrl);
 });
